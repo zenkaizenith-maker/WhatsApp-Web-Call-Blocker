@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>
+        WhatsApp Call Blocker
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <h2>
+        WhatsApp Call Blocker
+    </h2>
+
+
+    <!-- MAIN SWITCH -->
+
+    <div class="row">
+
+        <span>
+            Block calls
+        </span>
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="enabled"
+            >
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+
+    <!-- MODE -->
+
+    <div class="section">
+
+        <label for="mode">
+            Block mode
+        </label>
+
+        <select id="mode">
+
+            <option value="everyone">
+                Everyone
+            </option>
+
+            <option value="selected">
+                Selected contacts
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- CONTACTS -->
+
+    <div
+        id="contactsSection"
+        class="section hidden"
+    >
+
+        <label>
+            Blocked contacts
+        </label>
+
+        <div class="addContact">
+
+            <input
+                type="text"
+                id="contactInput"
+                placeholder="Name or phone number"
+            >
+
+            <button id="addContact">
+                Add
+            </button>
+
+        </div>
+
+
+        <div id="contactList"></div>
+
+    </div>
+
+
+    <!-- AUTO DECLINE -->
+
+    <div class="row auto">
+
+        <span>
+            Auto-decline blocked calls
+        </span>
+
+        <label class="switch">
+
+            <input
+                type="checkbox"
+                id="autoDecline"
+            >
+
+            <span class="slider"></span>
+
+        </label>
+
+    </div>
+
+
+    <p id="status">
+        Loading...
+    </p>
+
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>

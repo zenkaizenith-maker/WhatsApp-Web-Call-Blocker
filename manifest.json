@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Web Call Blocker",
+  "version": "3.0.0",
+  "description": "Suppress unwanted WhatsApp Web incoming calls.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://web.whatsapp.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "WhatsApp Web Call Blocker"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://web.whatsapp.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
